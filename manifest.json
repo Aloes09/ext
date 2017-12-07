@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "Izak stream helper",
-          "description": "Wtyczka przygotowana dla fanow Piotra 'izaka' Skowyrskiego. Pokazuje kiedy jest transmisja Live ",
+          "description": "Wtyczka przygotowana dla fanow Piotra 'izaka' Skowyrskiego. Dzieki niej nie ominiesz zadnego stream",
   "version": "1.0",
 
   "browser_action": {

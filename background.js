@@ -1,10 +1,10 @@
 console.log("funkcja");
-var recheckTime = 10000;
-var recheckTimeWhileOnline = 25000;
+var time = 180000;
 var isStreamOnline = false;
+var game = "";
 
 function isOnline() {
- console.log("Sprawdzam czy Izak jest Online....")
+    console.log("Sprawdzam czy Izak jest Online....")
     chrome.browserAction.setBadgeBackgroundColor({color: [255, 0, 0, 120]});
     $.ajax({
         type: 'GET',
@@ -22,30 +22,34 @@ function isOnline() {
                 localStorage.setItem("isStreamOnline", "false");
 
             } else {
-
+                if(data.stream.game!== null)
+                {
+                game = data.stream.game;
+                localStorage.setItem("game",game);
+                }
+                
+                console.log("Gra = " + game);
                 isStreamOnline = true;
                 chrome.browserAction.setBadgeText({text: "LIVE"});
                 localStorage.setItem("isStreamOnline", "true");
 
 
             }
-            console.log("isStreamOnline = " + isStreamOnline);
+            console.log("Online = " + isStreamOnline);
             console.log("----------------------------------------");
         },
         error: function (data) {
-            console.log("isOnline() failed getting data");
+            console.log("error");
         }
     });
 
-    setTimeout(delayChecking, 1);
+    setTimeout(reapeat, 1);
 }
 
-function delayChecking() {
-    if (isStreamOnline == true) {
-        setTimeout(isOnline, recheckTimeWhileOnline);
-    } else {
-        setTimeout(isOnline, recheckTime);
-    }
+function reapeat() {
+  
+        setTimeout(isOnline, time);
+ 
 }
 
 
