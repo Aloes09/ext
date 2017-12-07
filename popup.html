@@ -7,21 +7,46 @@
 <html>
     <head>
         <title>Izak stream helper</title>
-        <style type="text/css">
+        <style type="text/css">      
             body {
-                margin: 10px;
+                width: 200px;
+                padding: 0px;
+
+            }
+            #status {
+                font-size: 20px;
+                text-align: center;
+                font-weight: 700;
+          
+            }
+            .kwadrat {
                 white-space: nowrap;
+                width: 40%;
+                height: 40%;
+                padding: 0px;
             }
+            #tw {
+                padding-left: 7%;
+                padding-right: 1.5%;
 
-            h1 {
-                font-size: 15px;
             }
+            #yt {
+                padding-left: 1.5%;
+                padding-right: 7%;
+            }
+            #fb {
+                padding: 2%;
+                display: block;
+                margin: auto;
+                width: 85%;
+                height: 85%;
+            }
+            footer {
+                text-align: center;
+                font-style: italic;
+                font-size:9px; 
+            }  
 
-            #container {
-                align-items: center;
-                display: flex;
-                justify-content: space-between;
-            }
         </style>
 
         <!--
@@ -30,18 +55,27 @@
           -
           - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
         -->
-       <script src="jquery-3.2.1.min.js"></script>
+        <script src="jquery-3.2.1.min.js"></script>
     </head>
 
     <body>
-     
-        <div id="container">
-           
-            
-<p id="status" >£adowanie... <br /></p>
+
+   
+
+
+            <p id="status" >£adowanie... <br /></p>
+            <img class="kwadrat" id="tw" src="images/twitch.png" alt="logo twitch">
+            <img class="kwadrat" id="yt" src="images/youtube.png" alt="logo yt">
+            <img id="fb" src="images/facebook.png" alt="logo fb">
+            <footer>
+                <p>Izakooo stream helper 2017 &COPY; by Arek</p>
+            </footer>
+
+
+
             <script src="popup.js"></script>
 
 
-        </div>
+      
     </body>
 </html>

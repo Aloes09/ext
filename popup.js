@@ -1,11 +1,13 @@
-window.onload = function () {
+var stat = document.getElementById('status');
 
-    if (localStorage.getItem('isStreamOnline') === 'false')
-    {
-        document.getElementById('status').innerHTML = "Brak streama";
-        
-    } else
-        document.getElementById('status').innerHTML = "Izak streamuje !!!";
+if (localStorage.getItem('isStreamOnline') === 'false')
+{
+    stat.innerHTML = "OFFLINE";
+    stat.style.color = "red";
 
-
+} else
+{
+    stat.innerHTML = "ONLINE";
+    stat.style.color = "#00b200";
 }
+

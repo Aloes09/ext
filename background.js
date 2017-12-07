@@ -8,7 +8,7 @@ function isOnline() {
     chrome.browserAction.setBadgeBackgroundColor({color: [255, 0, 0, 120]});
     $.ajax({
         type: 'GET',
-        url: 'https://api.twitch.tv/kraken/streams/esl_pl ',
+        url: 'https://api.twitch.tv/kraken/streams/izakooo ',
         headers: {
             'Client-ID': 'o5a2cwx9qbuuha36m578spkb0n8tkf'
 
