@@ -1,0 +1,1 @@
+Rozszerzenie izak helper
