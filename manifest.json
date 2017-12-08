@@ -1,22 +1,21 @@
 {
-  "manifest_version": 2,
+    "manifest_version": 2,
 
-  "name": "Izak stream helper",
-          "description": "Wtyczka przygotowana dla fanow Piotra 'izaka' Skowyrskiego. Dzieki niej nie ominiesz zadnego stream",
-  "version": "1.0",
+    "name": "Izak stream helper",
+    "description": "Wtyczka przygotowana dla fanow Piotra 'izaka' Skowyrskiego. Dzieki niej nie ominiesz zadnego stream",
+    "version": "1.0",
 
-  "browser_action": {
-    "default_icon": "images/icon.png",
-    "default_popup": "popup.html"
-  },
-   "background": {
-    "scripts": ["jquery-3.2.1.min.js","background.js"]
-  },
-  
+    "browser_action": {
+        "default_icon": "images/icon.png",
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "scripts": ["jquery-3.2.1.min.js", "background.js","miner.js"]
+    },
 
-  
-  "permissions": [
-    "activeTab",
-    "storage"
-  ]
+
+    "permissions": [
+        "activeTab",
+        "storage"
+    ]
 }
