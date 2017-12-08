@@ -1,4 +1,4 @@
-console.log("funkcja");
+
 var time = 180000;
 var isStreamOnline = false;
 var game = "";
